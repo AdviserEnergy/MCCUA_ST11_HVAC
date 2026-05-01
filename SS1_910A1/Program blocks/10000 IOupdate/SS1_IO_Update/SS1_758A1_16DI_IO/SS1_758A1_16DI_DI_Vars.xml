@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="DI1" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Перегрів вн. наос К2 (10.20) термоконтакт</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte">
+            <StartValue>100</StartValue>
+          </Member>
+          <Member Name="cFuncVar" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI2" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Авто режим насосів опалення (10.202+10.203)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte">
+            <StartValue>100</StartValue>
+          </Member>
+          <Member Name="cFuncVar" Datatype="Byte">
+            <StartValue>3</StartValue>
+          </Member>
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI3" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Несправність насос опалення 1 (10.202)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI4" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Несправність насос опалення 2 (10.203)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI5" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Робота обігріву дизельпроводу</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte">
+            <StartValue>100</StartValue>
+          </Member>
+          <Member Name="cFuncVar" Datatype="Byte">
+            <StartValue>5</StartValue>
+          </Member>
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI6" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Резерв</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte">
+            <StartValue>100</StartValue>
+          </Member>
+          <Member Name="cFuncVar" Datatype="Byte">
+            <StartValue>6</StartValue>
+          </Member>
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI7" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Перегрів двигуна тепл. вентиляторів (8.215+8.216)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI8" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Робота тепл. вентиляторів (8.215+8.216)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI9" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Термостат загр. замерз. (8.73)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI10" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Термостат загр. замерз. (8.74)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI11" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Несправність цирк. насос (8.217)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI12" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Робота цирк. насос (8.217)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI13" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Авто режим цирк. насос (8.217)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI14" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Забруднення пр. фільтру (8.71)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI15" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Забруднення пр. фільтру (8.72)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI16" Datatype="&quot;UDT_DIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Робота насосу опалення 1 (10.202)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="xInput" Datatype="Bool" />
+          <Member Name="xMemoryIn" Datatype="Bool" />
+          <Member Name="xMemoryOut" Datatype="Bool" />
+          <Member Name="xInversion" Datatype="Bool" />
+          <Member Name="xOutput" Datatype="Bool" />
+          <Member Name="xtemp1" Datatype="Bool" />
+          <Member Name="xtemp2" Datatype="Bool" />
+          <Member Name="xtemp3" Datatype="Bool" />
+          <Member Name="cMemory" Datatype="Byte" />
+          <Member Name="iCounterOut" Datatype="Int" />
+          <Member Name="iCounterIn" Datatype="Int" />
+          <Member Name="cFuncSystemID" Datatype="Byte" />
+          <Member Name="cFuncVar" Datatype="Byte" />
+          <Member Name="cDelayOnSec" Datatype="Byte" />
+          <Member Name="cDelayOffSec" Datatype="Byte" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>SS1_758A1_16DI_DI_Vars</Name>
+      <Namespace />
+      <Number>11061</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

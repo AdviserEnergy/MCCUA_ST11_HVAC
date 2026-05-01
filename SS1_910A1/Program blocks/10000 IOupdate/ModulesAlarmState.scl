@@ -1,0 +1,29 @@
+﻿FUNCTION "ModulesAlarmState" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      xEnable : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      xAnyDeviceFault : Bool;
+      iActivateFaultsCount : DInt;
+      xNewEvent : Bool;
+   END_VAR
+
+   VAR_IN_OUT 
+      uLogDB : DB_ANY;
+   END_VAR
+
+   VAR_TEMP 
+      xBusy : Bool;
+      xValid : Bool;
+      xError : Bool;
+      wStatus : Word;
+      iActiveCounter : DInt;
+   END_VAR
+
+
+BEGIN
+END_FUNCTION
+

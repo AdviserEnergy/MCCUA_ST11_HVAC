@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="vAI1" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>2000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI2" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>22.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>-25.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>25.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI3" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>21.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>-25.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>25.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI4" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>19.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI5" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>21.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>14</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI6" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real" />
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI7" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real" />
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte" />
+          <Member Name="iFuncVar" Datatype="Byte" />
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI8" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real" />
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte" />
+          <Member Name="iFuncVar" Datatype="Byte" />
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI9" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>665.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI10" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>21.1</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI11" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>21.5</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI12" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>18.8</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI13" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>22.6</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI14" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>45.0</StartValue>
+          </Member>
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI15" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real" />
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte" />
+          <Member Name="iFuncVar" Datatype="Byte" />
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="vAI16" Datatype="&quot;UDT_vAI&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real" />
+          <Member Name="rRawValue" Datatype="Real" />
+          <Member Name="rMin" Datatype="Real" />
+          <Member Name="rMax" Datatype="Real" />
+          <Member Name="rCalibration" Datatype="Real" />
+          <Member Name="iFuncSystemID" Datatype="Byte" />
+          <Member Name="iFuncVar" Datatype="Byte" />
+          <Member Name="rFilterSet" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>HeatingPLC_vAI_Vars</Name>
+      <Namespace />
+      <Number>11001</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

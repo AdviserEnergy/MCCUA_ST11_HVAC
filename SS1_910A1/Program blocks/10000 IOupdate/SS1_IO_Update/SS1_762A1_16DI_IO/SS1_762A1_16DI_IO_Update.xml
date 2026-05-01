@@ -1,0 +1,3710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>SS1_762A1_16DI_IO_Update</Name>
+      <Namespace />
+      <Number>11060</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI1" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa0</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI2" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.03" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI3" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.04" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI4" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa3</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.05" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI5" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="21" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa4</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.06" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI6" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa5</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.07" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI7" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="32" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa6</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.08" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI8" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="39" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIa7 </Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text>DI01.1.08 EDP під охороною</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.09" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI9" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="40" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb0</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="43" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI10" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="35" />
+    <Call UId="36">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="37">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <Powerrail />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="xInversion" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="cMemory" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="36" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="36" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="36" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="37" Name="xInput" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="37" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="37" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="44" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="49" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI11" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="51" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.12" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI12" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="52" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="55" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="56" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb3</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="58" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.13" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI13" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="59" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb4</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="5F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.14" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI14" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="60" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="61" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="62" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="63" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb5</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="65" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="66" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.15" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI15" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="67" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="68" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="69" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb6</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="6D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI11.07.16" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xInversion" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="cDelayOffSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="cDelayOnSec" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xMemoryOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xMemoryIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="cMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="iCounterIn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="iCounterOut" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xInput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="xOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="cFuncSystemID" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="SS1_762A1_16DI_DI_Vars" />
+        <Component Name="DI16" />
+        <Component Name="cFuncVar" />
+      </Symbol>
+    </Access>
+    <Call UId="35">
+      <CallInfo Name="DIadv" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="xInversion" Section="Input" Type="Bool" />
+        <Parameter Name="cDelayOffSec" Section="Input" Type="Byte" />
+        <Parameter Name="cDelayOnSec" Section="Input" Type="Byte" />
+        <Parameter Name="xOutputFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xOutputUnFiltered" Section="Output" Type="Bool" />
+        <Parameter Name="xMemoryOut" Section="InOut" Type="Bool" />
+        <Parameter Name="xMemoryIn" Section="InOut" Type="Bool" />
+        <Parameter Name="cMemory" Section="InOut" Type="Byte" />
+        <Parameter Name="iCounterIn" Section="InOut" Type="Int" />
+        <Parameter Name="iCounterOut" Section="InOut" Type="Int" />
+      </CallInfo>
+    </Call>
+    <Call UId="36">
+      <CallInfo Name="DIvars" BlockType="FC">
+        <Parameter Name="xInput" Section="Input" Type="Bool" />
+        <Parameter Name="iFuncSystem" Section="Input" Type="Byte" />
+        <Parameter Name="iFuncVar" Section="Input" Type="Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="37">
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="xInput" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="xInversion" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="cDelayOffSec" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="cDelayOnSec" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="xMemoryOut" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="xMemoryIn" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="cMemory" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="iCounterIn" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="iCounterOut" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="35" Name="xOutputFiltered" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="35" Name="xOutputUnFiltered" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="36" Name="xInput" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="33" />
+      <NameCon UId="36" Name="iFuncSystem" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="34" />
+      <NameCon UId="36" Name="iFuncVar" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="70" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="71" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="72" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DIb7</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="73" CompositionName="Items">
+                <AttributeList>
+                  <Culture>uk-UA</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="74" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="75" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="76" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

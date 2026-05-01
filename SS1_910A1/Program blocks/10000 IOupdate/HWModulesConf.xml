@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="HW" Datatype="Array[1..14] of &quot;UDT_HWModulesMap&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="cRack" Datatype="Byte">
+            <Subelement Path="1">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>11</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>12</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>12</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>12</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>12</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>12</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>12</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="cModule" Datatype="Byte">
+            <Subelement Path="1">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>5</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>6</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>7</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>7</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>5</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="wLaddr1" Datatype="Word">
+            <Subelement Path="1">
+              <StartValue>263</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>269</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>270</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>286</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>271</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>272</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>287</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>288</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>280</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>282</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>283</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>284</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>285</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>281</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="wLaddr2" Datatype="Word">
+            <Subelement Path="1">
+              <StartValue>264</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="iDiagBuffer" Datatype="USInt" />
+          <Member Name="iOwnState" Datatype="UInt" />
+          <Member Name="wMaintenanceState" Datatype="DWord" />
+          <Member Name="wComponentStateDetail" Datatype="DWord" />
+          <Member Name="iOperatingState" Datatype="UInt" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>HWModulesConf</Name>
+      <Namespace />
+      <Number>10002</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

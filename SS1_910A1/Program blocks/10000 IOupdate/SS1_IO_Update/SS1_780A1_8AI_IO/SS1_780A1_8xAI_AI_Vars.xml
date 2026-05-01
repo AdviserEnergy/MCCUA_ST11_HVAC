@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="AI1" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Температура в прим. котельні (10.02)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>0.3255208</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI2" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">4-wire</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>1.808449</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI3" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Температура зв. теплоносія (10.12)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>3.616898E-05</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI4" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">4-wire</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>0.0003255208</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI5" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">HS Температура подачі теплоносія (10.13)</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>6.04022</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#01</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#0A</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI6" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">4-wire</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>17.15549</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>15.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#01</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#07</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI7" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Резерв</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>29.49942</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>100.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="AI8" Datatype="&quot;UDT_AIadv&quot;" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Резерв</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="rValue" Datatype="Real">
+            <StartValue>0.07957176</StartValue>
+          </Member>
+          <Member Name="rMin" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="rMax" Datatype="Real">
+            <StartValue>100.0</StartValue>
+          </Member>
+          <Member Name="rCalibration" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="iFuncSystemID" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="iFuncVar" Datatype="Byte">
+            <StartValue>16#00</StartValue>
+          </Member>
+          <Member Name="rFilterSet" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>SS1_780A1_8xAI_AI_Vars</Name>
+      <Namespace />
+      <Number>11031</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>uk-UA</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
